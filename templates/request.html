@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Message Classification</h1>
+        <form method="POST">
+            <label for="message">Enter your message:</label>
+            <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="message">
+            <p><strong>Message: </strong>{{ message }}</p>
+        </div>
+        <div class="result">
+            <p><strong>Prediction: </strong>{{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
