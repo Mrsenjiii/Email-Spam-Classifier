@@ -30,6 +30,9 @@ The web application processes user-submitted text messages to determine whether 
 4. **Results Display**: The classification result and the original message are displayed on the web page.
 
 
+![App Screen shot](images/Capture.JPG)
+![App screen shot](images/capture2.JPG)
+
 ## Getting Started
 
 1. **Clone the repository**:
